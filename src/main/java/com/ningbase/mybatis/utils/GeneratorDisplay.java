@@ -1,4 +1,4 @@
-package com.imooc.mybatis.utils;
+package com.ningbase.mybatis.utils;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;

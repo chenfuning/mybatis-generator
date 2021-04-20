@@ -10,25 +10,25 @@
 
         <!-- 通用mapper所在目录 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.imooc.my.mapper.MyMapper"/>
+            <property name="mappers" value="com.ningbase.my.mapper.MyMapper"/>
         </plugin>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/foodie-shop-dev"
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/foodie?serverTimezone=GMT%2B8&amp;useSSL=false"
                         userId="root"
-                        password="ll03001360">
+                        password="xinye123456">
         </jdbcConnection>
 
         <!-- 对应生成的pojo所在包 -->
-        <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.ningbase.pojo" targetProject="src/main/java"/>
 
 		<!-- 对应生成的mapper所在目录 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
 		<!-- 配置mapper对应的java映射 -->
-        <javaClientGenerator targetPackage="com.imooc.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+        <javaClientGenerator targetPackage="com.ningbase.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- 数据库表 -->
-        <table tableName="stu"></table>
+        <table tableName="users"></table>
     </context>
 </generatorConfiguration>
